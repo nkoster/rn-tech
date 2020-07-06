@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text } from 'react-native'
+import { Text, StyleSheet } from 'react-native'
 import { CardSection } from './common'
 
 class ListItem extends Component {
@@ -7,11 +7,18 @@ class ListItem extends Component {
         console.log(this.props.library)
         return (
             <CardSection>
-                <Text style={{height:30}}>{this.props.library.title}</Text>
+                <Text style={styles.title}>{this.props.library.title}</Text>
             </CardSection>
         )
 
     }
 }
+
+const styles = StyleSheet.create({
+    title: {
+        fontSize: 18,
+        paddingLeft: 15
+    }
+})
 
 export default ListItem
